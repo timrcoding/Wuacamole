@@ -158,9 +158,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8955414965961620922}
   - component: {fileID: 6849688908282294883}
+  - component: {fileID: 3004282212278767186}
   m_Layer: 0
   m_Name: Mole Prefab
-  m_TagString: Untagged
+  m_TagString: Mole
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,6 +201,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3004282212278767186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8955414965961620921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01fbd5bc4ead98041bef60fcfce0c4a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8955414966725112878
 GameObject:
   m_ObjectHideFlags: 0
