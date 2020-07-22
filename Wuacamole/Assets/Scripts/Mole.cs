@@ -34,4 +34,12 @@ public class Mole : MonoBehaviour
     {
         moleIsAvailable = false;
     }
+
+    public void moleCaught()
+    {
+        if (moleIsAvailable)
+        {
+            Debug.Log("CAUGHT");
+        }
+    }
 }
