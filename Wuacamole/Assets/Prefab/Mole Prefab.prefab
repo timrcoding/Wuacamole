@@ -254,6 +254,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moleIsAvailable: 0
+  uniqueRefForMole: 0
+  moleIsStrikable: 0
 --- !u!1 &8955414966725112878
 GameObject:
   m_ObjectHideFlags: 0

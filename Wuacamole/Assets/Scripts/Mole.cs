@@ -5,6 +5,9 @@ using UnityEngine;
 public class Mole : MonoBehaviour
 {
     public bool moleIsAvailable;
+    public int uniqueRefForMole;
+    [HideInInspector]
+    public bool moleIsStrikable;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +42,27 @@ public class Mole : MonoBehaviour
     {
         if (moleIsAvailable)
         {
-            Debug.Log("CAUGHT");
+            Debug.Log("Caught");
+            this.GetComponent<Animator>().SetTrigger("Mole_Hit");
+            Scoring.instance.incrementScore();
         }
+    }
+
+    public void moleIdle()
+    {
+        this.GetComponent<Animator>().SetTrigger("Mole_Idle");
+    }
+
+    public void setMoleStrikability()
+    {
+        StartCoroutine(moleStrikableForOneFrame());
+    }
+
+    public IEnumerator moleStrikableForOneFrame()
+    {
+        moleIsStrikable = true;
+        Debug.Log("Mole " + uniqueRefForMole + " is strikable");
+        yield return new WaitForSeconds(Time.deltaTime);
+        moleIsStrikable = false;
     }
 }
